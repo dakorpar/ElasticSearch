@@ -14,6 +14,7 @@ use Elastica\Exception\ExceptionInterface;
 use Elastica;
 use Kdyby;
 use Nette;
+use Nette\SmartObject;
 use Nette\Utils\Html;
 use Nette\Utils\Json;
 use Tracy\Debugger;
@@ -25,8 +26,10 @@ use Tracy\IBarPanel;
 /**
  * @author Filip Procházka <filip@prochazka.su>
  */
-class Panel extends Nette\Object implements IBarPanel
+class Panel implements IBarPanel
 {
+
+    use SmartObject;
 
 	/**
 	 * @var float
